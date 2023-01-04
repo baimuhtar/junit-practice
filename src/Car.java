@@ -6,7 +6,7 @@ public class Car {
     private String number;
     private int year;
     private String owner;
-    private List<String> owners = new ArrayList<>();
+    private ArrayList<String> owners = new ArrayList<>();
 
     public Car(String manufacturer, String number, int year, String owner) {
         this.manufacturer = manufacturer;
@@ -38,5 +38,8 @@ public class Car {
 
     public void setOwner(String owner) {
         this.owner = owner;
+    }
+    public ArrayList<String> getOwners(){
+        return owners;
     }
 }
