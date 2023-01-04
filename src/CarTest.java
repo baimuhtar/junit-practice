@@ -5,8 +5,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CarTest {
     Car car;
+
     @BeforeEach
-    public void createCar(){
+    public void createCar() {
         car = new Car("Skoda", "ABC-1234", 2019, "Baitanatov Mukhtar");
     }
 
@@ -42,4 +43,16 @@ class CarTest {
         car.setOwner("Andrey Kirillov");
         assertEquals("Andrey Kirillov", car.getOwner());
     }
+
+    @Test
+    void getListOfOwners() {
+        assertArrayEquals(new String[]{"Baitanatov Mukhtar"}, car.getOwners().toArray());
+    }
+
+    @Test
+    void getListOfTwoOwners(){
+        car.setOwner("Andrey Kirillov");
+        assertArrayEquals(new String[]{"Baitanatov Mukhtar", "Andrey Kirillov"}, car.getOwners().toArray());
+    }
+
 }

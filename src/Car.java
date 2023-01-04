@@ -38,8 +38,10 @@ public class Car {
 
     public void setOwner(String owner) {
         this.owner = owner;
+        owners.add(owner);
     }
-    public ArrayList<String> getOwners(){
+
+    public ArrayList<String> getOwners() {
         return owners;
     }
 }
