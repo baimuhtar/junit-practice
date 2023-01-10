@@ -49,4 +49,7 @@ public class Car {
     private String testMethod() {
         return "abc";
     }
+    private String testMethod(String a) {
+        return a;
+    }
 }
