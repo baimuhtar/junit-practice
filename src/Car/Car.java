@@ -1,3 +1,5 @@
+package Car;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,5 +45,8 @@ public class Car {
 
     public ArrayList<String> getOwners() {
         return owners;
+    }
+    private String testMethod() {
+        return "abc";
     }
 }
