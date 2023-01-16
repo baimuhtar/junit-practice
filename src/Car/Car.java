@@ -1,5 +1,6 @@
 package Car;
 
+import java.security.spec.ECField;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -54,5 +55,8 @@ public class Car {
     }
     public int testInt(int a) {
         return a+4;
+    }
+    public String getDataFromRemoteServer() throws RuntimeException {
+        throw new RuntimeException("error!!!");
     }
 }

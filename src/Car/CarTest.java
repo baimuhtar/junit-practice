@@ -114,5 +114,12 @@ class CarTest {
         assertEquals(expected, car.getNumber());
     }
 
+    @Test
+    void getTestData() {
+        Exception exception = assertThrows(RuntimeException.class, () -> {
+           car.getDataFromRemoteServer();
+        });
 
+        assertEquals("error!!!", exception.getMessage());
+    }
 }
